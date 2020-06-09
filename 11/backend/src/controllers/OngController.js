@@ -20,7 +20,7 @@ module.exports = {
          * usando o pacote crypto
          * 
          */
-        const id = crypto.randomBytes(50).toString('HEX');
+        const id = crypto.randomBytes(3).toString('HEX');
 
         await connection('ongs').insert({
             id,
