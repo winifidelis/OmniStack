@@ -1,0 +1,51 @@
+criei pro backend
+#npm init -y
+adicionei o express
+#npm install express --save
+para ver o projeto inicialmente
+#node index.js
+adicionar o nodemon para fazer o watch do projeto
+#npm i nodemon -D
+instalando o pacote que gerencia o banco de dados ==> http://knexjs.org/
+#npm install knex --save
+e colocando o driver do banco de dados
+#npm install sqlite3
+depois executar o comando 
+#npx knex init
+ele irá criar um arquivo 'knexfile.js', é nele que está a configuração do banco de dados
+Fiz algumas modificações no arquivo para adicionar as migrations que irei criar
+executar a linha abaixo para criar migration
+#npx knex migrate:make create_ongs
+caso ele apresente algum problema relacionado a useNullAsDefault, basta adicionar no arquivo knexfile.js a linha 'useNullAsDefault: true' isso fara o sqlite aceitar linhas default
+depois de preencher o arquivo knexfile.js com as colunas que são necessairas
+executar o arquivo para utilizar a migration
+#npx knex migrate:latest
+depois de criar tudo eu adicionei o cors
+#npm i --save cors
+
+criando o arquivo reack
+utilizei uma forma diferente de criar projetos
+aqui o professor mostrou uma forma nova que criar todo o projeto inicial pra mim
+#npx create-react-app frontend
+para iniciar o projeto
+#npm start
+
+
+0cdff7
+14a8b60a8987a19abba68786f61f852f8a16f8c8b416c73d41bf638153bf008be0a965fc659bc931b5d55408a5ca233ddf53
+
+
+
+Iniciando as atividades para mobile
+instlar o expo global
+#npm i -g expo-cli
+se houver problemas com a instalação verificar no link abaixo
+há vários problemas descritos que podem ser solucionados por lá
+https://github.com/Rocketseat/expo-common-issues
+depois do expo instalado
+#expo -h
+agora irei criar o projeto mobile
+#expo init mobile
+selecionei blank
+
+25 minutos
