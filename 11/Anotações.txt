@@ -48,4 +48,15 @@ agora irei criar o projeto mobile
 #expo init mobile
 selecionei blank
 
-25 minutos
+instalar
+#npm install @react-navigation/native
+e
+#expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+e
+#npm install @react-navigation/stack
+e
+#expo install expo-constants
+e
+#expo install expo-mail-composer
+e
+#npm install intl
