@@ -22,6 +22,26 @@ executar o arquivo para utilizar a migration
 #npx knex migrate:latest
 depois de criar tudo eu adicionei o cors
 #npm i --save cors
+Abaixo eu instalei uma biblioteca para fazer validações
+#npm install celebrate
+AGORA INSTALANDO O JEST QUE É UM TDD
+#npm install jest
+para iniciar os teste eu tenho que ir pra a raiz do meu projeto
+e executar o Jest
+#npx jest --init
+eu criei as configurações do meu teste e para executar
+#npm test
+irei instalar outro pacote
+#npm install cross-env
+o pacote acima me ajudara a trabalhar com as variaveis de ambiente
+nela eu irei tratar se estou em um ambiente de produção, desenvolvimento ou teste
+agora instalar outro pacote
+#npm install supertest -D
+
+
+
+
+
 
 criando o arquivo reack
 utilizei uma forma diferente de criar projetos
