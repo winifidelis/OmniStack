@@ -1,0 +1,19 @@
+criando o projeto web
+#yarn create react-app web --template typescript
+OU caso eu não tenha o yarn instalado
+#npx create-react-app web --template typescript
+
+um dos dois comandos acima funcionam para criar o projeto
+
+para executar o projeto web
+#cd web
+#yarn start
+
+no vídeo eu limpei o projeto
+
+Adicionei o pacote react-router-dom, isso servirá para fazer navegação entre as páginas
+#yarn add react-router-dom
+depois será necessario instalar o 
+#yarn add @types/react-router-dom
+
+aula 1 1:48:00
