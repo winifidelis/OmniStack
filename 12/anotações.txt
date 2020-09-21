@@ -1,3 +1,4 @@
+AULA 1
 criando o projeto web
 #yarn create react-app web --template typescript
 OU caso eu não tenha o yarn instalado
@@ -16,4 +17,55 @@ Adicionei o pacote react-router-dom, isso servirá para fazer navegação entre 
 depois será necessario instalar o 
 #yarn add @types/react-router-dom
 
-aula 1 1:48:00
+
+AULA 2
+criei a pasta do servidor e iniciei
+#mkdir server
+#yarn init -y
+
+abrir o code para começar a trabalhar
+
+instalei as dependencias do typescript
+-D para instalar no ambiente de desenvolvimento
+
+#yarn add typescript -D
+#yarn tsc --init
+
+a dependencia abaixo executa o servidor e fica observando caso tenha alteração no código
+#yarn add ts-node-dev -D
+
+adicionei as coisas no package.json para executar o programa
+--transpile-only isso aqui transforma do typescript em java script sem verifica erros, isso acelera o processo de execução da aplicação
+--ignore-watch node_modules isso aqui eu não quero que ele tente fazer conversões de código na pasta node_modules
+--respawn sempre que eu tiver alteração no código ele restarta
+
+tudo vai ficar assim
+"start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+
+instalar o microframework abaixo
+#yarn add express
+#yarn add @types/express -D
+
+instalar os arquivos de conexão do banco de dados
+#yarn add knex sqlite3
+
+executar os comando para criar migrations
+criei o arquivo knexfile.ts na raiz do projeto
+
+fiz modificações no arquivo package.json
+e criei na mão a minha migrate de users
+depois executei o comando abaixo com as adições que fiz no package.json
+#yarn knex:migrate
+
+
+1:58:00
+
+
+
+
+
+
+
+
+
+
