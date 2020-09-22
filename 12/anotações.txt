@@ -54,12 +54,15 @@ criei o arquivo knexfile.ts na raiz do projeto
 
 fiz modificações no arquivo package.json
 e criei na mão a minha migrate de users
-depois executei o comando abaixo com as adições que fiz no package.json
+depois executei o comando abaixo com as adições que fiz no package.js on
 #yarn knex:migrate
 
+ultimo pacote aser instalado
+#yarn add cors
+#yarn add @types/cors -D
+ele vai permitir que outras aplicações em endereços diferentes acesse o meu sevidor, pois por padrão ele só permite acessar o servidor com endereços iguais
 
-1:58:00
-
+1:00:00
 
 
 

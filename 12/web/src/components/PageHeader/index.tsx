@@ -10,6 +10,8 @@ import './style.css'
 
 interface PageHeaderPros {
     title: string;
+    description?: string;
+    //o '?' depois da palavra significa que ela não é obrigatória
 }
 
 //props são as propriedades
@@ -25,6 +27,8 @@ const PageHeader: React.FC<PageHeaderPros> = (props) => {
 
             <div className="header-content">
                 <strong>{props.title}</strong>
+                {/* o '&&' é o if que eu estou esperando apenas uma resposta, eu tenho o se, mas não tenho o senão*/}
+                {props.description && <p>{props.description}</p>}
 
                 {props.children}
             </div>

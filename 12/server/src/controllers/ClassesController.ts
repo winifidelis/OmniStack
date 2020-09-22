@@ -14,9 +14,33 @@ export default class ClassesController {
     async index(request: Request, response: Response) {
         const filter = request.query;
 
-        if(filter.wee){
+        const subject = filter.subject as string;
+        const week_day = filter.week_day as string;
+        const time = filter.time as string
 
+        if (!filter.week_day || !filter.subject || !filter.time) {
+            return response.status(400).json({
+                error: 'Missing filters to serch classes'
+            });
         }
+
+        const timeInMinutes = convertHoutToMinutes(time)
+
+        const classes = await db('classes')
+            .whereExists(function () {
+                this.select('classes_schedule.*')
+                .from('classes_schedule')
+                .whereRaw('`classes_schedule`.`classe_id` = `classes`.`id`')
+                //.whereRaw('`classes_schedule`.`week_day` = ?? ??',[week_day,outra_coisa])
+                .whereRaw('`classes_schedule`.`week_day` = ??',[Number(week_day)])
+                .whereRaw('`classes_schedule`.`from` <= ??',[timeInMinutes])
+                .whereRaw('`classes_schedule`.`to` > ??',[timeInMinutes])
+            })
+            .where('classes.subject', '=', subject)
+            .join('users', 'classes.user_id', '=', 'user_id')
+            .select(['classes.*', 'users.*']);
+
+        return response.json(classes)
     }
 
 
@@ -63,6 +87,7 @@ export default class ClassesController {
 
             return response.status(201).send();
         } catch (err) {
+            console.log(err)
             await trx.rollback();
             return response.status(400).json({
                 error: "Unexpected error while creating new class."
