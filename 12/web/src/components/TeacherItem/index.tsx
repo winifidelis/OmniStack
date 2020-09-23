@@ -3,29 +3,51 @@ import React from 'react';
 import './style.css';
 
 import whatsAppIcon from '../../assets/images/icons/whatsapp.svg'
+import api from '../../services/api';
 
-function TeacherItem() {
+export interface Teacher {
+    id: number;
+    subject: string;
+    cost: number;
+    name: string;
+    avatar: string;
+    whatsapp: string;
+    bio: string;
+}
+
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+
+    function createNewConnection(){
+        api.post('/connections',{
+            user_id: teacher.id,
+        })
+    }
+
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://i.pinimg.com/originals/73/95/cd/7395cdc04edf5226e91f60b6a548adfc.jpg" alt="Professor Fudêncio" />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div>
-                    <strong>Fudêncio</strong>
-                    Química
+                    <strong>{teacher.name}</strong>
+                    {teacher.subject}
                 </div>
             </header>
             <p>
-                Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim. Cevadis im ampola pa arma uma pindureta. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Paisis, filhis, espiritis santis.
+                {teacher.bio}
             </p>
             <footer>
                 <p>
                     Preço/hora
-                    <strong>R$ 80,00</strong>
+                    <strong>R$ {teacher.cost}</strong>
                 </p>
-                <button type="button">
+                <a href={`https://wa.me/${teacher.whatsapp}`} target="_blank" onClick={createNewConnection}>
                     <img src={whatsAppIcon} alt="whatsapp" />
                     Entrar em contato
-                </button>
+                </a>
             </footer>
         </article>
     );

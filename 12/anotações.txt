@@ -62,11 +62,30 @@ ultimo pacote aser instalado
 #yarn add @types/cors -D
 ele vai permitir que outras aplicações em endereços diferentes acesse o meu sevidor, pois por padrão ele só permite acessar o servidor com endereços iguais
 
-1:00:00
 
 
+aqui na aula 3 eu ja irei iniciar a conexão do web com server
+para fazer essa conexão eu irei instalar uma nova biblioteca
+#yarn add axios
 
 
+QUARTA AULA, INICIANDO O MOBILE
+aqui eu ja tenho que ter o expo instalado na minha maquina
+#expo init mobile
+ele pode informar que há versões nova do expo veja o texto abaixo
+------------------------------------------------------------------------------
+There is a new version of expo-cli available (3.27.8).
+You are currently using expo-cli 3.24.2
+Install expo-cli globally using the package manager of your choice;
+for example: `npm install -g expo-cli` to get the latest version
+-------------------------------------------------------------------------------
+ele ira dar opções tambem, aqui eu selecionei black (TypeScript)
+
+instalar os pacotes de font do expo
+#expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins
+
+
+00:48:00
 
 
 
