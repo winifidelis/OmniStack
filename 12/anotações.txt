@@ -84,10 +84,18 @@ ele ira dar opções tambem, aqui eu selecionei black (TypeScript)
 instalar os pacotes de font do expo
 #expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins
 
+instalar a biblioteca abaixo para ter navegação das telas
+para os comandor abaixo ver link https://reactnavigation.org/docs/getting-started
+#yarn add @react-navigation/native
+#expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+https://reactnavigation.org/docs/hello-react-navigation
+#yarn add @react-navigation/stack
+https://reactnavigation.org/docs/tab-based-navigation
+#yarn add @react-navigation/bottom-tabs
 
-00:48:00
+instalar o axios
+#yarn add axios
 
-
-
-
+como eu não estou conseguindo acessar o backend terminarei em casa isso aqui
+00:46:00
 
