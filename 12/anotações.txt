@@ -96,6 +96,10 @@ https://reactnavigation.org/docs/tab-based-navigation
 instalar o axios
 #yarn add axios
 
-como eu não estou conseguindo acessar o backend terminarei em casa isso aqui
-00:46:00
+tive problemas para usar a linha import AsyncStorage from '@react-native-community/async-storage';
+então adicionei o pacote abaixo
+#yarn add @react-native-community/async-storage
+
+
+
 
